@@ -11,4 +11,5 @@
     @media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sun-doodle{left:7%}.chai-doodle{right:7%}}
     @media(max-width:560px){.top-note{font-size:11px}.poll-intro{padding:34px 10px 24px}.poll-intro h1{font-size:41px}.sun-doodle{left:2%;top:20px;font-size:28px}.chai-doodle{right:1%;top:30px;font-size:29px}.grid{grid-template-columns:1fr;max-width:390px;margin:auto}.photo-wrap{height:190px}.card:first-child,.card:nth-child(2),.card:nth-child(3),.card:first-child:hover,.card:nth-child(2):hover,.card:nth-child(3):hover{transform:none}}
     .photo-wrap{height:auto}.photo-wrap img{display:block;width:100%;height:auto;object-fit:contain}.card:hover .photo-wrap img{transform:none}
+    .sync-status{margin:8px 0 0;color:var(--muted);font-size:12px}.sync-status.is-error{color:#a33b2c}.vote-btn:disabled{opacity:.55;cursor:not-allowed}
   

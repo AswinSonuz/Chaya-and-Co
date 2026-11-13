@@ -26,6 +26,7 @@
       <div class="eyebrow">The gang?s mini poll</div>
       <h1 id="hero-title">Where shall we go<br><em>for chai?</em><br><em>after GEC</em></h1>
       <p>Pick your favourite little plan. We?ll see what wins!</p>
+      <p class="sync-status" id="sync-status" role="status">Connecting to shared poll…</p>
       <span class="chai-doodle" aria-hidden="true">?</span>
     </section>
 
@@ -39,7 +40,7 @@
         <div>
           <div class="eyebrow">The group has spoken</div>
           <h2 id="results-title">The plan so far</h2>
-          <p>Votes update live on this device.</p>
+          <p>Votes sync across devices.</p>
         </div>
         <div class="total-pill" id="total-pill">0 votes cast</div>
       </div>
@@ -67,12 +68,14 @@
         <input class="name-input" id="voter-name" name="name" maxlength="40" autocomplete="name" required placeholder="e.g. Alex">
         <button class="button" type="submit">Count me in <span aria-hidden="true">?</span></button>
       </form>
-      <p class="modal-hint">One vote per name on this device. You can change your mind later.</p>
+      <p class="modal-hint">One vote per browser profile. Votes sync across devices, but each device has its own voter identity.</p>
     </div>
   </div>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script src="supabase-config.js" defer></script>
   <script src="script.js" defer></script>
 </body>
 </html>
