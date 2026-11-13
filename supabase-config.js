@@ -1,15 +1,4 @@
-async function testSupabase() {
-    const { data, error } = await supabaseClient
-        .from('votes')
-        .select('*')
-        .limit(5);
-
-    if (error) {
-        console.error("SUPABASE ERROR:", error);
-        alert("Connection failed: " + error.message);
-    } else {
-        console.log("Supabase connected successfully!", data);
-    }
-}
-
-testSupabase();
+window.CHAI_SUPABASE_CONFIG = {
+  url: 'https://tfyyksybgaljjolqofsc.supabase.co',
+  publicKey: 'sb_publishable_serNsT5f9iwmfG8P6iDJJw_nS1XzY_l'
+};
