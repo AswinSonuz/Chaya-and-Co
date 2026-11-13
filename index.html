@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4f0">
+  <meta name="description" content="A considered little corner of the internet for choosing where to go next.">
+  <title>Chai & Co. ? Pick the plan</title>
+  <link rel="preconnect" href="https://i.pinimg.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="wrap topbar">
+    <a class="brand" href="#top" aria-label="Chai and Co home">
+      <span class="brand-mark"><span>?</span></span>chai &amp; co.
+    </a>
+    <span class="top-note">? little outing, lovely chai ?</span>
+  </header>
+
+  <main id="top" class="wrap">
+    <section class="poll-intro" aria-labelledby="hero-title">
+      <span class="sun-doodle" aria-hidden="true">?</span>
+      <div class="eyebrow">The gang?s mini poll</div>
+      <h1 id="hero-title">Where shall we go<br><em>for chai?</em></h1>
+      <p>Pick your favourite little plan. We?ll see what wins!</p>
+      <span class="chai-doodle" aria-hidden="true">?</span>
+    </section>
+
+    <section id="places" aria-labelledby="places-title">
+      <h2 class="sr-only" id="places-title">Choose one of three chai plans</h2>
+      <div class="grid" id="places-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="results-section" id="results" aria-labelledby="results-title" hidden>
+      <div class="results-top">
+        <div>
+          <div class="eyebrow">The group has spoken</div>
+          <h2 id="results-title">The plan so far</h2>
+          <p>Votes update live on this device.</p>
+        </div>
+        <div class="total-pill" id="total-pill">0 votes cast</div>
+      </div>
+      <div class="result-list" id="result-list" aria-live="polite"></div>
+      <div class="voter-panel">
+        <div class="voter-heading">
+          <h3>Who?s going where</h3>
+          <span>Every vote, accounted for</span>
+        </div>
+        <div class="voter-list" id="voter-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer"><span>Made with a Cup of Cofee || Er. Aswin Sonuzz</span></footer>
+
+  <div class="modal-backdrop" id="vote-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <button class="modal-close" id="modal-close" aria-label="Close dialog">?</button>
+      <div class="eyebrow">Make it official</div>
+      <h2 id="modal-title">Cast your vote</h2>
+      <p class="modal-place" id="modal-place"></p>
+      <form id="vote-form">
+        <label class="field-label" for="voter-name">Your name</label>
+        <input class="name-input" id="voter-name" name="name" maxlength="40" autocomplete="name" required placeholder="e.g. Alex">
+        <button class="button" type="submit">Count me in <span aria-hidden="true">?</span></button>
+      </form>
+      <p class="modal-hint">One vote per name on this device. You can change your mind later.</p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
